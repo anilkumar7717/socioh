@@ -131,7 +131,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void init() {
         mAuth = FirebaseAuth.getInstance();
         needNewAccountLink = findViewById(R.id.register_account_link);
-        userEmail = findViewById(R.id.login_email);
+        userEmail = findViewById(R.id.et_login_email);
         userPassword = findViewById(R.id.login_password);
         mLoginButton = findViewById(R.id.login_button);
         loadingBar = new ProgressDialog(this);
