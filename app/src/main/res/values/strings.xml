@@ -11,6 +11,6 @@
     <string name="action_settings">Settings</string>
     <string name="token">479995358559-5qscbbk65odgkegevqj12j4hobs9a11k.apps.googleusercontent.com</string>
     <string name="message_app_not_install">Application is not installed.</string>
-    <string name="don_t_have_an_account_need_new_account">Don\'t have an Account Need New Account?</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
 
 </resources>
