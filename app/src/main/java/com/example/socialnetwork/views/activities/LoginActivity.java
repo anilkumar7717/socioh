@@ -2,6 +2,7 @@ package com.example.socialnetwork.views.activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -32,9 +33,9 @@ import com.google.firebase.auth.GoogleAuthProvider;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     private Button mLoginButton;
     private EditText userEmail, userPassword;
-    private TextView needNewAccountLink, forgetPasswordLink;
+    private TextView tvSignUp, forgetPasswordLink, tvOr, tvDontHaveAcc;
     private ProgressDialog loadingBar;
-    private ImageView googleSignInButton;
+//    private ImageView googleSignInButton;
 
     private FirebaseAuth mAuth;
     private boolean emailAddressChecker;
@@ -130,23 +131,42 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void init() {
         mAuth = FirebaseAuth.getInstance();
-        needNewAccountLink = findViewById(R.id.register_account_link);
+        tvDontHaveAcc = findViewById(R.id.tv_dont_have_acc);
+        tvSignUp= findViewById(R.id.tv_sign_up);
         userEmail = findViewById(R.id.et_login_email);
         userPassword = findViewById(R.id.login_password);
         mLoginButton = findViewById(R.id.login_button);
         loadingBar = new ProgressDialog(this);
         forgetPasswordLink = findViewById(R.id.forget_password_link);
+        tvOr = findViewById(R.id.tv_or);
+
+        Typeface sfUiTextRegularFont = Typeface.createFromAsset(getAssets(), "SF-UI-Text-Regular.ttf");
+        userEmail.setTypeface(sfUiTextRegularFont);
+        userPassword.setTypeface(sfUiTextRegularFont);
+
+        Typeface avenirHeavy = Typeface.createFromAsset(getAssets(), "Avenir_Heavy.ttf");
+        mLoginButton.setTypeface(avenirHeavy);
+        tvSignUp.setTypeface(avenirHeavy);
+        forgetPasswordLink.setTypeface(avenirHeavy);
+
+        Typeface avenirBlack = Typeface.createFromAsset(getAssets(), "AvenirLTStd-Black.otf");
+        tvOr.setTypeface(avenirBlack);
+
+        Typeface avenirRoman = Typeface.createFromAsset(getAssets(), "AvenirLTStd-Roman.otf");
+        tvDontHaveAcc.setTypeface(avenirRoman);
+
+
         forgetPasswordLink.setOnClickListener(this);
-        needNewAccountLink.setOnClickListener(this);
+        tvSignUp.setOnClickListener(this);
         mLoginButton.setOnClickListener(this);
-        googleSignInButton = findViewById(R.id.google_signin_button);
-        googleSignInButton.setOnClickListener(this);
+//        googleSignInButton = findViewById(R.id.google_signin_button);
+//        googleSignInButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.register_account_link:
+            case R.id.tv_sign_up:
                 sendUserToRegisterActivity();
                 break;
 
@@ -154,9 +174,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 allowUserToLogin();
                 break;
 
-            case R.id.google_signin_button:
+            /*case R.id.google_signin_button:
                 signIn();
-                break;
+                break;*/
 
             case R.id.forget_password_link:
                 startActivity(new Intent(LoginActivity.this, ResetPasswordActivity.class));
