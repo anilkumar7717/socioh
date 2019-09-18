@@ -1,0 +1,18 @@
+
+ysquid:S1450""[Remove the "mLoginButton" field and declare it as a local variable in the relevant methods.(û…’Å8∑Ä”É‘-
+isquid:CommentedOutCodeLineM"<This block of commented-out lines of code should be removed.(ÂÜÚò8∑Ä”É‘-
+osquid:CommentedOutCodeLine¢"<This block of commented-out lines of code should be removed.(ê≠Üô¸ˇˇˇˇ8∞ÙÎÉ‘-
+Wsquid:UnusedPrivateMethodC"+Remove this unused private "signIn" method.(ÀúöÎ8∑Ä”É‘-
+qsquid:S1450$"SRemove the "tvOr" field and declare it as a local variable in the relevant methods.(•Ω¡Ó8˝—ÒÉ‘-
+zsquid:S1450$"\Remove the "tvDontHaveAcc" field and declare it as a local variable in the relevant methods.(•Ω¡Ó8∑Ä”É‘-
+osquid:CommentedOutCodeLine≤"<This block of commented-out lines of code should be removed.(¬‘ˇ©˝ˇˇˇˇ8∞ÙÎÉ‘-
+X"squid:SwitchLastCaseIsDefaultCheck®""Add a default case to this switch.(é∫÷ç8∞ÙÎÉ‘-
+usquid:S1450$"WRemove the "tvSignUp" field and declare it as a local variable in the relevant methods.(•Ω¡Ó8ãœÑÑ‘-
+isquid:CommentedOutCodeLine&"<This block of commented-out lines of code should be removed.(´ÚüΩ8∑Ä”É‘-
+Isquid:S1659$"+Declare "tvDontHaveAcc" on a separate line.(•Ω¡Ó8»≈¸É‘-
+Nsquid:S1659$"0Declare "forgetPasswordLink" on a separate line.(•Ω¡Ó8∑Ä”É‘-
+Asquid:S1659#"*Declare "userPassword" on a separate line.(™ô¬
+@squid:S1659$""Declare "tvOr" on a separate line.(•Ω¡Ó8µôÒÉ‘-
+ô"squid:ClassVariableVisibilityCheck,"_Make mGoogleSignInClient a static final constant or non-public and provide accessors if needed.(Àµåÿ¯ˇˇˇˇ8∑Ä”É‘-
+Ösquid:S1450)"bRemove the "emailAddressChecker" field and declare it as a local variable in the relevant methods.(´Æ–”˝ˇˇˇˇ8∑Ä”É‘-
+squid:S1450$"aRemove the "forgetPasswordLink" field and declare it as a local variable in the relevant methods.(•Ω¡Ó8∑Ä”É‘-

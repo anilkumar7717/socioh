@@ -1,6 +1,7 @@
 package com.example.socialnetwork.views.activities;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.socialnetwork.R;
@@ -23,6 +25,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
     private Button sendResetEmailButton;
     private EditText resetEmailInput;
+    private TextView tvForgotPassTxt;
 
     private FirebaseAuth mAuth;
 
@@ -60,6 +63,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
     private void init() {
         mAuth = FirebaseAuth.getInstance();
         mToolbar = findViewById(R.id.forget_password_toolbar);
+        tvForgotPassTxt = findViewById(R.id.tv_forgot_pass_txt);
         setSupportActionBar(mToolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -67,5 +71,15 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
         sendResetEmailButton = findViewById(R.id.reset_password_email_button);
         resetEmailInput = findViewById(R.id.reset_email);
+
+
+        Typeface avinerLightFont = Typeface.createFromAsset(getAssets(), "Avenir_Light.ttf");
+        tvForgotPassTxt.setTypeface(avinerLightFont);
+
+        Typeface sfUiTextRegularFont = Typeface.createFromAsset(getAssets(), "SF-UI-Text-Regular.ttf");
+        resetEmailInput.setTypeface(sfUiTextRegularFont);
+
+        Typeface avenirHeavy = Typeface.createFromAsset(getAssets(), "Avenir_Heavy.ttf");
+        sendResetEmailButton.setTypeface(avenirHeavy);
     }
 }

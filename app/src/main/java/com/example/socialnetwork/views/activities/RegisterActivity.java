@@ -2,6 +2,7 @@ package com.example.socialnetwork.views.activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -62,6 +63,15 @@ public class RegisterActivity extends AppCompatActivity {
         userPassword = findViewById(R.id.register_password);
         userConfirmPassword = findViewById(R.id.register_confirm_password);
         createAccountButton = findViewById(R.id.register_create_account);
+
+        Typeface sfUiTextRegularFont = Typeface.createFromAsset(getAssets(), "SF-UI-Text-Regular.ttf");
+        userEmail.setTypeface(sfUiTextRegularFont);
+        userPassword.setTypeface(sfUiTextRegularFont);
+        userConfirmPassword.setTypeface(sfUiTextRegularFont);
+
+        Typeface avenirHeavy = Typeface.createFromAsset(getAssets(), "Avenir_Heavy.ttf");
+        createAccountButton.setTypeface(avenirHeavy);
+
         loadingBar = new ProgressDialog(this);
     }
 
