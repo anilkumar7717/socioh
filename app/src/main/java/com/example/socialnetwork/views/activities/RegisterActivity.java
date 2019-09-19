@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.socialnetwork.R;
@@ -24,7 +25,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText userEmail, userPassword, userConfirmPassword;
     private Button createAccountButton;
     private ProgressDialog loadingBar;
-
+    private TextView tvAlreadyAcc, tvSigninIn;
     private FirebaseAuth mAuth;
 
     @Override
@@ -37,6 +38,13 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 createNewAccount();
+            }
+        });
+
+        tvSigninIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+              sendUserToLoginActivity();
             }
         });
     }
@@ -63,6 +71,8 @@ public class RegisterActivity extends AppCompatActivity {
         userPassword = findViewById(R.id.register_password);
         userConfirmPassword = findViewById(R.id.register_confirm_password);
         createAccountButton = findViewById(R.id.register_create_account);
+        tvAlreadyAcc = findViewById(R.id.tv_already_acc);
+        tvSigninIn = findViewById(R.id.tv_signin_in);
 
         Typeface sfUiTextRegularFont = Typeface.createFromAsset(getAssets(), "SF-UI-Text-Regular.ttf");
         userEmail.setTypeface(sfUiTextRegularFont);
@@ -71,8 +81,13 @@ public class RegisterActivity extends AppCompatActivity {
 
         Typeface avenirHeavy = Typeface.createFromAsset(getAssets(), "Avenir_Heavy.ttf");
         createAccountButton.setTypeface(avenirHeavy);
+        tvSigninIn.setTypeface(avenirHeavy);
+
+        Typeface avenirRoman = Typeface.createFromAsset(getAssets(), "AvenirLTStd-Roman.otf");
+        tvAlreadyAcc.setTypeface(avenirRoman);
 
         loadingBar = new ProgressDialog(this);
+
     }
 
     private void createNewAccount() {

@@ -19,10 +19,10 @@
         </shape>
     </item>
     <item
-        android:bottom="@dimen/dimen_2"
-        android:left="@dimen/dimen_2"
-        android:right="@dimen/dimen_2"
-        android:top="@dimen/dimen_2">
+        android:bottom="1dp"
+        android:left="1dp"
+        android:right="1dp"
+        android:top="1dp">
         <shape android:shape="rectangle" >
             <solid android:color="#fff" />
             <corners

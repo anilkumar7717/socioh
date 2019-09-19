@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.BaseTransientBottomBar;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
@@ -59,7 +61,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mGoogleSignInClient = new GoogleApiClient.Builder(this).enableAutoManage(this, new GoogleApiClient.OnConnectionFailedListener() {
             @Override
             public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-                Toast.makeText(LoginActivity.this, "Connection to Google Sign in failed...", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(LoginActivity.this, "Connection to Google Sign in failed...", Toast.LENGTH_SHORT).show();
+                Snackbar.make(findViewById(R.id.content),"Connection to Google Sign in failed...", Snackbar.LENGTH_SHORT).show();
             }
         }).addApi(Auth.GOOGLE_SIGN_IN_API, gso).build();
     }
@@ -84,9 +87,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             if (result.isSuccess()) {
                 GoogleSignInAccount account = result.getSignInAccount();
                 firebaseAuthWithGoogle(account);
-                Toast.makeText(this, "Please wait, while we are getting your auth result...", Toast.LENGTH_SHORT).show();
+                Snackbar.make(findViewById(R.id.content),"Please wait, while we are getting your auth result...", Snackbar.LENGTH_SHORT).show();
+//                Toast.makeText(this, "Please wait, while we are getting your auth result...", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "Can't get Auth result.", Toast.LENGTH_SHORT).show();
+                Snackbar.make(findViewById(R.id.content),"Can't get Auth result.", Snackbar.LENGTH_SHORT).show();
+//                Toast.makeText(this, "Can't get Auth result.", Toast.LENGTH_SHORT).show();
                 loadingBar.dismiss();
             }
         }
@@ -110,7 +115,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
                             String message = task.getException().getMessage();
                             sendUserToLoginActivity();
-                            Toast.makeText(LoginActivity.this, "Not Authenticated : " + message, Toast.LENGTH_SHORT).show();
+
+                            Snackbar.make(findViewById(R.id.content),"Not Authenticated : " + message, Snackbar.LENGTH_SHORT).show();
+//                            Toast.makeText(LoginActivity.this, "Not Authenticated : " + message, Toast.LENGTH_SHORT).show();
                             loadingBar.dismiss();
                         }
 
@@ -189,9 +196,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String password = userPassword.getText().toString();
 
         if (TextUtils.isEmpty(email)) {
-            Toast.makeText(this, "Please write your email...", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Please write your email...", Toast.LENGTH_SHORT).show();
+            Snackbar.make(findViewById(R.id.content),"Please write your email", Snackbar.LENGTH_SHORT).show();
         } else if (TextUtils.isEmpty(password)) {
-            Toast.makeText(this, "Please write your password...", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "Please write your password...", Toast.LENGTH_SHORT).show();
+            Snackbar.make(findViewById(R.id.content),"Please write your password", Snackbar.LENGTH_SHORT).show();
         } else {
             loadingBar.setTitle("Login");
             loadingBar.setMessage("Please wait, while we are allowing you to login into your Account...");
@@ -205,7 +214,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         loadingBar.dismiss();
                     } else {
                         String message = task.getException().getMessage();
-                        Toast.makeText(LoginActivity.this, "Error Occurred: " + message, Toast.LENGTH_SHORT).show();
+                        Snackbar.make(findViewById(R.id.content),"Error Occurred: " + message, Snackbar.LENGTH_SHORT).show();
+//                        Toast.makeText(LoginActivity.this, "Error Occurred: " + message, Toast.LENGTH_SHORT).show();
                         loadingBar.dismiss();
                     }
                 }
@@ -221,7 +231,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             if (emailAddressChecker){
                 sendUserToMainActivity();
             } else {
-                Toast.makeText(this, "Please verify your account first...", Toast.LENGTH_SHORT).show();
+                Snackbar.make(findViewById(R.id.content),"Please verify your account first", Snackbar.LENGTH_SHORT).show();
+//                Toast.makeText(this, "Please verify your account first...", Toast.LENGTH_SHORT).show();
                 mAuth.signOut();
             }
         }
