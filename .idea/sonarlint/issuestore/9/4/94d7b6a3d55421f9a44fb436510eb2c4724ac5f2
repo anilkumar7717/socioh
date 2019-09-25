@@ -1,3 +1,5 @@
 
-Fsquid:S1659"*Declare "userPassword" on a separate line.(ÆƒÙúüÿÿÿÿ
-Msquid:S1659"1Declare "userConfirmPassword" on a separate line.(ÆƒÙúüÿÿÿÿ
+Fsquid:S1659"*Declare "userPassword" on a separate line.(ÆƒÙúüÿÿÿÿ
+~squid:S1450"[Remove the "tvAlreadyAcc" field and declare it as a local variable in the relevant methods.(ı¿çùşÿÿÿÿ8Ÿ»ÔÔ-
+Ksquid:S1659"(Declare "tvSigninIn" on a separate line.(ı¿çùşÿÿÿÿ8ÙÃ‚ÔÔ-
+Msquid:S1659"1Declare "userConfirmPassword" on a separate line.(ÆƒÙúüÿÿÿÿ

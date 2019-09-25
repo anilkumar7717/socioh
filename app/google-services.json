@@ -1,52 +1,45 @@
 {
   "project_info": {
-    "project_number": "479995358559",
-    "firebase_url": "https://poster-b87ce.firebaseio.com",
-    "project_id": "poster-b87ce",
-    "storage_bucket": "poster-b87ce.appspot.com"
+    "project_number": "389093979641",
+    "firebase_url": "https://single-giggles.firebaseio.com",
+    "project_id": "single-giggles",
+    "storage_bucket": "single-giggles.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:479995358559:android:a11cb8386456fc4a",
+        "mobilesdk_app_id": "1:389093979641:android:061ccb49a45d6b4ae8b928",
         "android_client_info": {
-          "package_name": "com.example.socialnetwork"
+          "package_name": "com.singlegiggles"
         }
       },
       "oauth_client": [
         {
-          "client_id": "479995358559-ats4gfi50nv22qo7hd2dbi1epr7pjfls.apps.googleusercontent.com",
+          "client_id": "389093979641-7uktg2ul9c5sh1ufhnua0gcatpss5l6d.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.socialnetwork",
-            "certificate_hash": "4998389da3f018a89dacae0aba65933e745bf5d9"
+            "package_name": "com.singlegiggles",
+            "certificate_hash": "2b7a7816030511ac22c4c3a2dab755de7f095255"
           }
         },
         {
-          "client_id": "479995358559-5qscbbk65odgkegevqj12j4hobs9a11k.apps.googleusercontent.com",
+          "client_id": "389093979641-ammhlf9u3q8psve6dcte9mokraqlc2hu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBNbEXBiuh_DVAfWiYiIGNNrhgiIwA6bY0"
+          "current_key": "AIzaSyCXOO62Q8pqBAIO0B_Q8wLMydu4B9A1cDA"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "479995358559-5qscbbk65odgkegevqj12j4hobs9a11k.apps.googleusercontent.com",
+              "client_id": "389093979641-ammhlf9u3q8psve6dcte9mokraqlc2hu.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }
