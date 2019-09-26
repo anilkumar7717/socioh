@@ -15,137 +15,142 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="0dp"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@drawable/post_border"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/update_post_page_toolbar">
 
-        <android.support.constraint.Guideline
-            android:id="@+id/leftGuideline"
-            android:layout_width="wrap_content"
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.05" />
+            android:background="@drawable/post_border">
 
-        <android.support.constraint.Guideline
-            android:id="@+id/rightGuideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.95" />
+            <EditText
+                android:id="@+id/post_description"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:background="@drawable/inputs"
+                android:gravity="start"
+                android:hint="Post Description..."
+                android:minLines="15"
+                android:padding="15dp"
+                android:scrollbars="vertical"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/space" />
 
-        <android.support.constraint.Guideline
-            android:id="@+id/topGuideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.03" />
+            <ImageButton
+                android:id="@+id/view_select_post_image"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/post_description"
+                app:srcCompat="@drawable/add_post_high" />
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/post_profile_image"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/add_post_high"
-            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
-            app:layout_constraintTop_toTopOf="@+id/topGuideline" />
+            <ImageView
+                android:id="@+id/update_post_button"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/send"
+                app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/view_select_post_image" />
 
-        <TextView
-            android:id="@+id/post_user_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:drawablePadding="10dp"
-            android:text=""
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
-            android:textColorHint="@color/colorPrimaryDark"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/post_profile_image"
-            app:layout_constraintTop_toTopOf="@+id/topGuideline" />
+            <ImageView
+                android:id="@+id/select_post_image"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/attach"
+                app:layout_constraintBottom_toBottomOf="@+id/update_post_button"
+                app:layout_constraintEnd_toStartOf="@+id/update_post_button"
+                app:layout_constraintTop_toTopOf="@+id/update_post_button" />
 
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="To Public"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="10sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/post_profile_image"
-            app:layout_constraintTop_toBottomOf="@+id/post_user_name" />
+            <Space
+                android:id="@+id/space"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintTop_toBottomOf="@+id/post_profile_image" />
+
+            <TextView
+                android:id="@+id/post_user_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:drawablePadding="10dp"
+                android:text=""
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/post_profile_image"
+                app:layout_constraintTop_toTopOf="@+id/topGuideline" />
 
 
-        <Space
-            android:id="@+id/space"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
-            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
-            app:layout_constraintTop_toBottomOf="@+id/post_profile_image" />
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="To Public"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/post_profile_image"
+                app:layout_constraintTop_toBottomOf="@+id/post_user_name" />
 
-        <EditText
-            android:id="@+id/post_description"
-            android:layout_width="0dp"
-            android:layout_height="250dp"
-            android:background="@drawable/inputs"
-            android:gravity="start"
-            android:minLines="15"
-            android:padding="15dp"
-            android:scrollbars="vertical"
-            android:hint="Post Description..."
-            android:textColorHint="@color/colorWhite"
-            android:textAlignment="viewStart"
-            android:textColor="@color/colorWhite"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
-            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
-            app:layout_constraintTop_toBottomOf="@+id/space" />
+            <android.support.constraint.Guideline
+                android:id="@+id/leftGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
 
-        <ImageButton
-            android:id="@+id/view_select_post_image"
-            android:layout_width="0dp"
-            android:layout_height="200dp"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:visibility="gone"
-            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
-            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
-            app:layout_constraintTop_toBottomOf="@+id/post_description"
-            app:srcCompat="@drawable/add_post_high" />
+            <android.support.constraint.Guideline
+                android:id="@+id/rightGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
 
-        <ImageView
-            android:id="@+id/update_post_button"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/send"
-            app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
-            app:layout_constraintTop_toBottomOf="@+id/view_select_post_image" />
+            <android.support.constraint.Guideline
+                android:id="@+id/topGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.03" />
 
-        <ImageView
-            android:id="@+id/select_post_image"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/attach"
-            app:layout_constraintBottom_toBottomOf="@+id/update_post_button"
-            app:layout_constraintEnd_toStartOf="@+id/update_post_button"
-            app:layout_constraintTop_toTopOf="@+id/update_post_button" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/post_profile_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/add_post_high"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintTop_toTopOf="@+id/topGuideline" />
 
-    </android.support.constraint.ConstraintLayout>
-
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

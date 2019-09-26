@@ -232,10 +232,8 @@ public class SettingActivity extends AppCompatActivity {
             CropImage.activity().setGuidelines(CropImageView.Guidelines.ON)
                     .setAspectRatio(1, 1)
                     .start(this);
-        }
-
-        /*--check requestCode & resultCode & data then call CropImage Activity--*/
-        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+        }/*--check requestCode & resultCode & data then call CropImage Activity--*/
+        else if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             if (resultCode == RESULT_OK) {
 

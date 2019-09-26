@@ -1,0 +1,16 @@
+
+`squid:S1192\"IDefine a constant instead of duplicating this literal "fullname" 4 times.(¿²ğ²
+isquid:S1192`"MDefine a constant instead of duplicating this literal "profileimage" 4 times.(ğ·Ñ øÿÿÿÿ
+Dsquid:S16590"-Declare "selectPostImage" on a separate line.(µ©®Ò
+Dsquid:S16598"-Declare "saveCurrentTime" on a separate line.(îèİ
+Csquid:S16598",Declare "postRandomName" on a separate line.(îèİ
+@squid:S16598")Declare "downloadUrl" on a separate line.(îèİ
+Dsquid:S16598"-Declare "current_user_id" on a separate line.(îèİ
+Asquid:S1659;"%Declare "postRef" on a separate line.(Ã¯÷àúÿÿÿÿ
+nsquid:S1450-"WRemove the "mToolbar" field and declare it as a local variable in the relevant methods.(êˆ‹©
+ksquid:S1450<"TRemove the "mAuth" field and declare it as a local variable in the relevant methods.(ªĞ”’
+rsquid:S001168"ZRename this field "current_user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îèİ
+squid:S1186k"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ğ÷‘Şÿÿÿÿÿ
+squid:S1186¸"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ğ÷‘Şÿÿÿÿÿ
+squid:S1186ß"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ğ÷‘Şÿÿÿÿÿ
+bsquid:CommentedOutCodeLinec"<This block of commented-out lines of code should be removed.(¹ı˜´

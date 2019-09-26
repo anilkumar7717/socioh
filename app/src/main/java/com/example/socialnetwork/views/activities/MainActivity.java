@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         Picasso.get().load(image).placeholder(R.drawable.profile).into(navProfileImg);
                     } /* then show message if both fullname & profileimage*/ else {
 
-                        Toast.makeText(MainActivity.this, "Profile name do not exists", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(MainActivity.this, "Profile name do not exists", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
