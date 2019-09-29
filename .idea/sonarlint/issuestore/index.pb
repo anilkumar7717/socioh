@@ -11,3 +11,7 @@ Rapp/src/main/java/com/example/socialnetwork/views/activities/RegisterActivity.j
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 ~
 Napp/src/main/java/com/example/socialnetwork/views/activities/PostActivity.java,8\a\8aa47609b2329ad2e77c3f33516d46e3245e94ce
+Å
+Qapp/src/main/java/com/example/socialnetwork/views/activities/SettingActivity.java,e\e\ee310979e5465113ec8b920eb316f757eea5900a
+~
+Napp/src/main/java/com/example/socialnetwork/views/activities/MainActivity.java,8\1\81e73e164664aeb43356ee6d2c6fe2db2879ab81

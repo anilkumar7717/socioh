@@ -44,7 +44,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class PostActivity extends AppCompatActivity {
     private Toolbar mToolbar;
     private ProgressDialog loadingBar;
-    private ImageButton viewselectPostImage;
+    private ImageView viewselectPostImage;
     private ImageView updatePostButton, selectPostImage;
     private CircleImageView profileImg;
     private EditText postDescription;

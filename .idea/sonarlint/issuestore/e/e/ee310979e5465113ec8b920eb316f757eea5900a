@@ -1,0 +1,21 @@
+
+Dsquid:S1659+"(Declare "userStatus" on a separate line.(æ’åÖûÿÿÿÿ
+`squid:S1854ç"<Remove this useless assignment to local variable "imageUri".(Íƒ“Íüÿÿÿÿ8¹ÁÒôÖ-
+esquid:S1192G"IDefine a constant instead of duplicating this literal "username" 3 times.(ªñ„Áûÿÿÿÿ
+Qsquid:S1481ç"-Remove this unused "imageUri" local variable.(Íƒ“Íüÿÿÿÿ8¹ÁÒôÖ-
+csquid:S1192`"GDefine a constant instead of duplicating this literal "gender" 3 times.(ÌùñÛşÿÿÿÿ
+isquid:S3776ã"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(¹Î¾
+Esquid:S1659+")Declare "userCountry" on a separate line.(æ’åÖûÿÿÿÿ
+Fsquid:S1659+"*Declare "userProfName" on a separate line.(æ’åÖûÿÿÿÿ
+isquid:S1192B"MDefine a constant instead of duplicating this literal "profileimage" 3 times.(ğ·Ñ øÿÿÿÿ
+nsquid:S37769"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(¨Œşÿÿÿÿ
+Asquid:S1659+"%Declare "userDob" on a separate line.(æ’åÖûÿÿÿÿ
+`squid:S1192L"IDefine a constant instead of duplicating this literal "fullname" 3 times.(¿²ğ²
+ssquid:S1450)"WRemove the "mToolabr" field and declare it as a local variable in the relevant methods.(Ğ¡„ôøÿÿÿÿ
+ksquid:S14500"TRemove the "mAuth" field and declare it as a local variable in the relevant methods.(ªĞ”’
+squid:S1186o"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ğ÷‘Şÿÿÿÿÿ
+dsquid:S1192["HDefine a constant instead of duplicating this literal "country" 3 times.(¤óÎÄÿÿÿÿÿ
+Dsquid:S1659+"(Declare "userGender" on a separate line.(æ’åÖûÿÿÿÿ
+csquid:S1192Q"GDefine a constant instead of duplicating this literal "status" 3 times.(Ìúšèşÿÿÿÿ
+osquid:S1192e"SDefine a constant instead of duplicating this literal "relationshipstatus" 3 times.(µ°ùïüÿÿÿÿ
+Fsquid:S1659+"*Declare "userRelation" on a separate line.(æ’åÖûÿÿÿÿ

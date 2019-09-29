@@ -215,7 +215,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         postsAdapter.startListening();
         postList.setAdapter(postsAdapter);
-        updateUserStatus("online");
+       // updateUserStatus("online");
     }
 
     private void sendUserToPostActivity() {

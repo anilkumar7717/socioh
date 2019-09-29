@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -32,31 +32,32 @@
             <EditText
                 android:id="@+id/post_description"
                 android:layout_width="0dp"
-                android:layout_height="250dp"
-                android:background="@drawable/inputs"
+                android:layout_height="150dp"
+                android:background="@drawable/bg_edit_text"
                 android:gravity="start"
                 android:hint="Post Description..."
                 android:minLines="15"
                 android:padding="15dp"
                 android:scrollbars="vertical"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite"
+                android:textColor="#9D2A58"
+                android:textColorHint="#9D2A58"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view_select_post_image"
                 app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
-                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
-                app:layout_constraintTop_toBottomOf="@+id/space" />
+                app:layout_constraintStart_toEndOf="@+id/view_select_post_image"
+                app:layout_constraintTop_toTopOf="@+id/view_select_post_image" />
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/view_select_post_image"
-                android:layout_width="0dp"
-                android:layout_height="200dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="44dp"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
-                android:visibility="gone"
-                app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                android:visibility="visible"
                 app:layout_constraintStart_toStartOf="@+id/leftGuideline"
-                app:layout_constraintTop_toBottomOf="@+id/post_description"
+                app:layout_constraintTop_toBottomOf="@+id/text"
                 app:srcCompat="@drawable/add_post_high" />
 
             <ImageView
